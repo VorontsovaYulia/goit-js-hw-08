@@ -29,8 +29,9 @@ function onInput(evt) {
 function onSubmit(evt) {
     evt.preventDefault();
 
-    console.log(JSON.parse(localStorage.getItem("feedback-form-state")));
-
-    localStorage.clear();
-    formEl.reset();
+    if (localStorage.getItem("feedback-form-state")){
+        console.log(JSON.parse(localStorage.getItem("feedback-form-state")));
+        localStorage.clear();
+        formEl.reset();
+    }  
 }
