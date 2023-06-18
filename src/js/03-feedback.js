@@ -23,7 +23,8 @@ function onInput(evt) {
         message: message.value,
     }
         
-        localStorage.setItem("feedback-form-state", JSON.stringify(data));      
+    localStorage.setItem("feedback-form-state", JSON.stringify(data));  
+
 }
 
 function onSubmit(evt) {
