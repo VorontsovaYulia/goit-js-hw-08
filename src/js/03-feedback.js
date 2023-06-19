@@ -29,6 +29,11 @@ function onInput(evt) {
 
 function onSubmit(evt) {
     evt.preventDefault();
+    const elements = evt.target.elements;
+    if (elements.email.value === "" || elements.message.value === "") {
+        alert("Всі поля повинні бути заповнені!");
+        return;
+    }
 
     if (localStorage.getItem("feedback-form-state")){
         console.log(JSON.parse(localStorage.getItem("feedback-form-state")));
